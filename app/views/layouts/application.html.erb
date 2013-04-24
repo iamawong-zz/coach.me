@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CoachMe</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+  <title>Coach.me</title>
 </head>
 <body>
+  <div id="header-frame">
+    <a class="logo"></a>
+    <a class="about">About</a>
+    <a class="find">Find</a>
+    <a class="join">Join</a>
+  </div>
 
-<%= yield %>
+  <div id="content">
+    <%= yield %>
+  </div>
 
+  <div id="footer">
+  </div>
 </body>
 </html>
