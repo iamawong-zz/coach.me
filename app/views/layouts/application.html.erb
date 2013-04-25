@@ -5,11 +5,16 @@
 </head>
 <body>
   <div id="header-frame">
+    <%= link_to image_tag("logo.png"), root_path %>
     <a class="logo"></a>
     <a class="about">About</a>
     <a class="find">Find</a>
     <%= link_to "Join", new_user_registration_path %>
-    <%= link_to "Login", new_user_session_path %>
+    <% if user_signed_in? %>
+      <%= link_to "Logout", destroy_user_session_path %>
+    <% else %>
+      <%= link_to "Login", new_user_session_path %>
+    <% end %>
   </div>
 
   <% # Something that devise wanted me to add, will look more into this later. %>
