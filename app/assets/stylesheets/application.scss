@@ -206,12 +206,10 @@ FOOTER STYLIZATION
 	font-size: 13px;
 	font-weight: bold;
 	margin: 0 20px 0 0;
-}
-
-#footer a:hover {
-	color: $main_link_color_hover;
-}
-
-#footer a:active {
-	color: $main_link_color_active;
+	&:hover {
+	  color: $main_link_color_hover;
+  }
+  &:active {
+	  color: $main_link_color_active;
+  }
 }
