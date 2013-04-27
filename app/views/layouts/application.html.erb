@@ -2,29 +2,39 @@
 <html>
 <head>
   <title>Coach.me</title>
+  <% #jQuery hosted by Google %>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  
 </head>
 <body>
-  <div id="header-frame">
-    <%= link_to image_tag("logo.png"), root_path %>
-    <a class="about">About</a>
-    <a class="find">Find</a>
-    <%= link_to "Join", new_user_registration_path %>
-    <% if user_signed_in? %>
-      <%= link_to "Logout", destroy_user_session_path %>
-    <% else %>
-      <%= link_to "Login", new_user_session_path %>
-    <% end %>
-  </div>
-
-  <% # Something that devise wanted me to add, will look more into this later. %>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-
-  <div id="content">
-    <%= yield %>
-  </div>
-
-  <div id="footer">
+  <div id="container">
+	  <div id="header-frame">
+	    <div id="header">
+	      <%= link_to image_tag("logo.png"), root_path, :class=>"logo" %>
+	      <a class="header-links">Find a Coach</a>
+	      <% if user_signed_in? %>
+	        <%= link_to "Logout", destroy_user_session_path, :class=>"header-links right-link" %>
+	      <% else %>
+	        <%= link_to "Login", new_user_session_path, :class=>"header-links right-link" %>
+	        <%= link_to "Sign up", new_user_registration_path, :class=>"header-links right-link" %>
+	      <% end %>
+	    </div>
+	  </div>
+	
+	  <% # Something that devise wanted me to add, will look more into this later. %>
+	  <p class="notice"><%= notice %></p>
+	  <p class="alert"><%= alert %></p>
+	
+	  <div id="content">
+	    <%= yield %>
+	  </div>
+	
+	  <div id="footer-frame">
+	    <div id="footer">
+	      <a href="">About</a>
+	    </div>
+	  </div>
   </div>
 </body>
 </html>

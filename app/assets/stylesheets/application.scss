@@ -1,0 +1,217 @@
+/*///////////////////////////////
+GLOBAL SCSS VARIABLES 
+////////////////*/
+
+//Global layout
+$page_width: 1100px;
+$header_height: 50px;
+$footer_header: 50px;
+
+//Colors
+$background_color: #333;
+$main_link_color: #999;
+$main_link_color_hover: #ccc;
+$main_link_color_active: #fff;
+
+//Fonts
+$font: "Helvetica Neue";
+
+
+/*///////////////////////////////
+HTML RESET
+////////////////*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+input, textarea {
+	font-family: $font, Helvetica, Tahoma;
+}
+
+textarea {
+	resize: none;
+	margin: 0;
+	padding: 0;
+}
+
+input[type=text], textarea, input[type=password] {
+	border: 1px solid #000;
+	background: transparent;
+}
+
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+	outline: none;
+}
+
+input[type=button], input[type=submit] {
+	cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+   color: #666;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #666;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #666;  
+}
+
+:-ms-input-placeholder {  
+   color: #666;  
+}
+
+/*///////////////////////////////
+CONTAINER STYLIZATION
+////////////////*/
+html, body {
+	background-color: $background_color;
+	font-family: $font, Helvetica, Tahoma;
+	margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#container {
+	min-height: 100%;
+  position: relative;
+}
+
+/*///////////////////////////////
+HEADER STYLIZATION
+////////////////*/
+#header-frame {
+	width: 100%;
+	border-bottom: 2px solid #222;
+	height: $header_height;
+}
+
+#header {
+	margin: 0 auto;
+	width: $page_width;
+	height: $header_height;
+}
+
+.logo img {
+	float: left;
+	margin: 15px 30px 0 0;
+	height: 20px;
+}
+
+.header-links {
+	float: left;
+	line-height: 50px;
+	font-weight: bold;
+	color: $main_link_color;
+	font-size: 13px;
+	margin-left: 30px;	
+	&:hover { 
+		color: $main_link_color_hover; 
+	}
+	&:active {
+		color: $main_link_color_active;
+	}
+}
+
+.right-link {
+	float: right;
+}
+
+/*///////////////////////////////
+CONTENT STYLIZATION
+////////////////*/
+#content {
+  width: 1100px;
+	margin: 0 auto;
+  padding-bottom: $footer_header;
+}
+
+/*///////////////////////////////
+FOOTER STYLIZATION
+////////////////*/
+#footer {
+	margin: 0 auto;
+	width: $page_width;
+	height: $footer_header;
+	padding-top: 10px;
+}
+
+#footer-frame {
+	width: 100%;
+	background-color: #222;
+	position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: $footer_header;
+}
+
+#footer a {
+	color: $main_link_color;
+	font-size: 13px;
+	font-weight: bold;
+	margin: 0 20px 0 0;
+}
+
+#footer a:hover {
+	color: $main_link_color_hover;
+}
+
+#footer a:active {
+	color: $main_link_color_active;
+}
