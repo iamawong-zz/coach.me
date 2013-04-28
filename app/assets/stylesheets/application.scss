@@ -12,9 +12,14 @@ $background_color: #333;
 $main_link_color: #999;
 $main_link_color_hover: #ccc;
 $main_link_color_active: #fff;
+$main-button-bkgcolor: #30B1A9;
+$main-button-fntcolor: #fff;
 
 //Fonts
 $font: "Helvetica Neue";
+
+//Sizes
+$title-size: 24px;
 
 
 /*///////////////////////////////
@@ -31,7 +36,7 @@ fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, input[type=checkbox] {
     margin:0;
     padding:0;
     border:0;
@@ -78,23 +83,23 @@ table {
     border-spacing:0;
 }
 
-input, textarea {
-	font-family: $font, Helvetica, Tahoma;
-}
-
+input {
+  background: transparent;
+  font-family: $font, Helvetica, Tahoma;
+	&:focus {
+	  outline: none;
+	}
+} 
+	
 textarea {
-	resize: none;
+  font-family: $font, Helvetica, Tahoma;
+  background: transparent;
+  resize: none;
 	margin: 0;
 	padding: 0;
-}
-
-input[type=text], textarea, input[type=password] {
-	border: 1px solid #000;
-	background: transparent;
-}
-
-input[type=text]:focus, input[type=password]:focus, textarea:focus {
-	outline: none;
+	&:focus {
+		outline: none;
+	}
 }
 
 input[type=button], input[type=submit] {
@@ -176,10 +181,21 @@ HEADER STYLIZATION
 /*///////////////////////////////
 CONTENT STYLIZATION
 ////////////////*/
-#content {
+#content-frame {
   width: 1100px;
 	margin: 0 auto;
   padding-bottom: $footer_header;
+}
+
+#content {
+	padding: 20px 0;
+}
+
+.title {
+	font-size: $title-size;
+	color: #ccc;
+	margin-bottom: 20px;
+	width: 100%;
 }
 
 /*///////////////////////////////
@@ -210,4 +226,16 @@ FOOTER STYLIZATION
   &:active {
 	  color: $main_link_color_active;
   }
+}
+
+/*///////////////////////////////
+GLOBAL ELEMENT STYLIZATION
+////////////////*/
+.main-button {
+	background-color: $main-button-bkgcolor;
+	color: $main-button-fntcolor;
+	border: none;
+	font-weight: bold;
+	font-size: 16px;
+	padding: 10px 20px;
 }
