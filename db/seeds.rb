@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Game.create :name => "sc"
+Game.create :name => "sc2"
+Game.create :name => "dota2"
+Game.create :name => "lol"
