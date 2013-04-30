@@ -9,6 +9,11 @@
 <body>
   <div id="container">
 	  <div id="header-frame">
+	    <div id="header-notifs">
+	    	<% # Something that devise wanted me to add, will look more into this later. %>
+	    	<div class="notice"><%= notice %></div>
+	    	<div class="alert"><%= alert %></div>
+	    </div>
 	    <div id="header">
 	      <%= link_to image_tag("logo.png"), root_path, :class=>"logo" %>
 	      <a class="header-links">Find a Coach</a>
@@ -20,11 +25,7 @@
 	      <% end %>
 	    </div>
 	  </div>
-	
-	  <% # Something that devise wanted me to add, will look more into this later. %>
-	  <p class="notice"><%= notice %></p>
-	  <p class="alert"><%= alert %></p>
-	
+	  
 	  <div id="content-frame">
 	    <div id="content">
 	      <%= yield %>

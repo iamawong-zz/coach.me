@@ -1,3 +1,11 @@
+/*///////////////////////////////
+GLOBAL SCSS VARIABLES 
+////////////////*/
+
+//Colors 
+$error-bkgcolor: #FF5F59;
+$error-fntcolor: #fff;
+
 .devise-input {
 	border: none;
 	border-bottom: 5px solid #666;
@@ -26,4 +34,22 @@
 .devise-forgot-pass {
 	color: #999;
 	font-size: 13px;
+}
+
+
+//Cannot find origin of this ID, would change it to something better if I could.
+#error_explanation {
+	background-color: $error-bkgcolor;
+	color: $error-fntcolor;
+	padding: 10px;
+	font-size: 13px;
+	width: 300px;
+}
+
+#error_explanation h2 {
+	margin-bottom: 10px;
+}
+
+#error_explanation li {
+	margin-top: 2px;
 }
