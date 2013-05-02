@@ -1,8 +1,12 @@
 require 'spec_helper'
 
 describe Game do
+  before :each do
+    @game = FactoryGirl.create(:game)
+  end
+
   it "has a valid factory" do
-    FactoryGirl.create(:game).should be_valid
+    @game.should be_valid
   end
 
   it "is invalid without a name" do
@@ -10,14 +14,14 @@ describe Game do
   end
 
   it "should not have duplicate names" do
-    FactoryGirl.create(:game, :name => "sc").should be_valid
+    @game.should be_valid
 
-    FactoryGirl.build(:game, :name => "sc").should_not be_valid
+    FactoryGirl.build(:game).should_not be_valid
   end
 
   it "should not save duplicate names" do
-    FactoryGirl.create(:game, :name => "sc").should be_valid
+    @game.should be_valid
 
-    expect { FactoryGirl.create!(:game, :name => "sc") }.to raise_error
+    expect { FactoryGirl.create!(:game) }.to raise_error
   end
 end
