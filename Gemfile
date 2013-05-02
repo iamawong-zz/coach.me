@@ -1,25 +1,26 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
-gem 'devise', '2.2.3'
+gem 'devise', '~> 2.2.3'
 gem 'rdoc'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-group :development do
-  gem 'sqlite3'
-  gem 'rspec-rails'
-  gem 'factory_girl_rails'
+group :development, :test do
+  gem 'rspec-rails', '~> 2.12.2'
+  gem 'factory_girl_rails', '~> 4.2.1'
 end
 
+group :development do
+  gem 'sqlite3'
+  end
+
 group :test do
-  gem 'faker'
-  gem 'capybara'
-  gem 'guard-rspec'
-  gem 'launchy'
-  gem 'rspec-rails'
-  gem 'factory_girl_rails'
+  gem 'faker', '~> 1.1.2'
+  gem 'capybara', '~> 2.1.0'
+  gem 'guard-rspec', '~> 2.5.4'
+  gem 'launchy', '~> 2.3.0'
 end
 
 group :production do

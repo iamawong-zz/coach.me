@@ -169,17 +169,17 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  capybara
-  devise (= 2.2.3)
-  factory_girl_rails
-  faker
-  guard-rspec
+  capybara (~> 2.1.0)
+  devise (~> 2.2.3)
+  factory_girl_rails (~> 4.2.1)
+  faker (~> 1.1.2)
+  guard-rspec (~> 2.5.4)
   jquery-rails
-  launchy
+  launchy (~> 2.3.0)
   pg
   rails (= 3.2.3)
   rdoc
-  rspec-rails
+  rspec-rails (~> 2.12.2)
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (>= 1.0.3)
