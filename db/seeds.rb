@@ -10,3 +10,11 @@ Game.create :name => "sc"
 Game.create :name => "sc2"
 Game.create :name => "dota2"
 Game.create :name => "lol"
+
+StarcraftRace.create :race => "terran"
+StarcraftRace.create :race => "protoss"
+StarcraftRace.create :race => "zerg"
+
+Starcraft2Race.create :race => "terran"
+Starcraft2Race.create :race => "protoss"
+Starcraft2Race.create :race => "zerg"
