@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
 gem 'devise', '~> 2.2.3'
+gem 'unicorn', '~>4.4.0'
+gem 'foreigner', '~>1.4.1'
 gem 'rdoc'
 
 # Bundle edge Rails instead:

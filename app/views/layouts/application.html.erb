@@ -12,6 +12,7 @@
 	    <div id="header">
 	      <%= link_to image_tag("logo.png"), root_path, :class=>"logo" %>
 	      <a class="header-links">Find a Coach</a>
+        <a class="header-links">Register as Coach</a>
 	      <% if user_signed_in? %>
 	        <%= link_to "Logout", destroy_user_session_path, :method => :delete, :class=>"header-links right-link" %>
 	      <% else %>

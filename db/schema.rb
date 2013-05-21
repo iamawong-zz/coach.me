@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130504234352) do
+ActiveRecord::Schema.define(:version => 20130514062803) do
 
   create_table "games", :force => true do |t|
     t.string   "name",       :null => false
@@ -20,6 +20,17 @@ ActiveRecord::Schema.define(:version => 20130504234352) do
   end
 
   add_index "games", ["name"], :name => "index_games_on_name", :unique => true
+
+  create_table "starcraft2_coaches", :force => true do |t|
+    t.integer  "users_id"
+    t.integer  "starcraft2_races_id"
+    t.float    "rate"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+  end
+
+  add_index "starcraft2_coaches", ["starcraft2_races_id"], :name => "index_starcraft2_coaches_on_starcraft2_races_id"
+  add_index "starcraft2_coaches", ["users_id"], :name => "index_starcraft2_coaches_on_users_id"
 
   create_table "starcraft2_races", :force => true do |t|
     t.string   "race",       :null => false
