@@ -1,4 +1,8 @@
 CoachMe::Application.routes.draw do
+  get "coach/search"
+
+  get "coach/register"
+
   devise_for :users
 
   root :to => "home#index"
